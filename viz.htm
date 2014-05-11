@@ -3,15 +3,15 @@
 <head>
 <meta charset='utf-8'>
 <title>政治獻金視覺化</title>
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./public/css/style.css">
 <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.min.js"></script>
-<script src="./conf.js"></script>
+<script src="./public/viz.conf.js"></script>
 </head>
 <body>
-<h1> 政治獻金視覺化 <a id="github" href="https://github.com/ronnywang/GovCash">GitHub</a></h1>
+<h1> 政治獻金視覺化 <a id="github" href="https://github.com/fuyei/cf-viz">GitHub</a></h1>
 <div class="sidebar">
   <ul id="politicians">
   </ul>  
@@ -36,7 +36,7 @@
     var arr = [];
     // create a select list
     $.each(politicians, function(){
-      var name =  this.replace(/(.*)參選人(.{3})政治獻金專戶.csv/g,'$2');
+      var name =  this.replace(/(.*)參選人(.*)政治獻金專戶.csv/g,'$2');
       $('#politicians').append('<li><a href="#" value="'+this+'">'+ name +'</a></li>');
     });
 
